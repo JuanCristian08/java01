@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -8,7 +9,54 @@ public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        exMedia(scan);
+        exemploFor(scan);
+    }
+    public static  void exemploFor(Scanner scan){
+        int[] numeros = new int[4];
+        numeros[0] = new Random().nextInt(11);
+        numeros[1] = new Random().nextInt(11);
+        numeros[2] = new Random().nextInt(11);
+        numeros[3] = new Random().nextInt(11);
+        for (int i = 0; i < numeros.length; i++) {
+            System.out.println(numeros[i]);
+        }
+    }
+
+    public static void exemploLoop(Scanner scan){
+       // int contador = 0;
+       // while(contador < 10){
+       //     contador++;
+       //     System.out.println(contador);
+      //  }
+       // do{
+
+       // }while(contador < 10);
+
+       // String senhaLocal = "123";
+       // String senha = "";
+       // while(!senha.equals(senhaLocal)){
+       //     System.out.println("Digite sua senha: ");
+        //    senha = scan.next();
+      //  }
+
+        while (true){
+            System.out.println("1-Oi\n2-Tchau\n0-Sair\nOpção");
+            int op = scan.nextInt();
+            switch (op){
+                case 1:
+                    System.out.println("Oi");
+                    break;
+                case 2:
+                    System.out.println("Tchau");
+                    break;
+                case 3:
+                    System.out.println("Sair");
+                    break;
+                case 0:
+                    System.out.println("Opção");
+                    break;
+            }
+        }
     }
 
     public static void exMedia(Scanner scan){
